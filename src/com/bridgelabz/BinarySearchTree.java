@@ -6,9 +6,10 @@ public class BinarySearchTree {
     public static void main(String[] args) {
         System.out.println("Welcome to Binary Search Tree program ");
         BinarySearchTree binarySearchTree = new BinarySearchTree();
-        binarySearchTree.insertionElements(56);
-        binarySearchTree.insertionElements(30);
-        binarySearchTree.insertionElements(70);
+        int[] data={56, 30, 70, 22, 40, 11, 3, 16, 60, 95, 65, 63, 67};
+        for (int i :data) {
+            binarySearchTree.insertionElements(i);
+        }
         binarySearchTree.sorting();
         binarySearchTree.toPrint();
     }
