@@ -6,14 +6,11 @@ public class BinarySearchTree {
     public static void main(String[] args) {
         System.out.println("Welcome to Binary Search Tree program ");
         BinarySearchTree binarySearchTree = new BinarySearchTree();
-        int[] data = {56, 30, 70, 22, 40, 11, 3, 16, 60, 95, 65, 63, 67};
-        for (int i : data) {
-            binarySearchTree.insertionElements(i);
-        }
+        binarySearchTree.insertionElements(56);
+        binarySearchTree.insertionElements(30);
+        binarySearchTree.insertionElements(70);
         binarySearchTree.sorting();
         binarySearchTree.toPrint();
-        System.out.println();
-        binarySearchTree.findingNode(63);
     }
 
     public <T> void insertionElements(T data) {
@@ -38,17 +35,6 @@ public class BinarySearchTree {
             currentNode = currentNode.getNext();
         }
 
-    }
-
-    public <T> void findingNode(T data) {
-        Node currentNode = root;
-
-        while (currentNode != null) {
-            if (currentNode.data == data) {
-                System.out.println("Element Found in the Tree :" + data);
-            }
-            currentNode = currentNode.next;
-        }
     }
 
     public void toPrint() {
